@@ -6,6 +6,10 @@ class App < Sinatra::Base
     erb :newteam
   end
 
+  get '/newteam' do
+    erb :newteam
+  end
+
   post '/team' do
     @teamname=params["name"]
     @coach=params["coach"]
@@ -13,7 +17,7 @@ class App < Sinatra::Base
     @shootingguard=params["sg"]
     @smallforward=params["sf"]
     @powerforward=params["pf"]
-    @center=params=["c"]
+    @center=params["c"]
     erb :team
   end
 end
